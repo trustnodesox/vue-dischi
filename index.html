@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="master.css">
+  </head>
+  <body>
+    <div id="root">
+      <div v-for="disco in dischi" class="disco">
+        <img :src="disco.poster" alt="">
+        <div class="details">
+
+        <span>{{disco.author}}</span>
+        <span>{{disco.genre}}</span>
+        <span>{{disco.title}}</span>
+        <span>{{disco.year}}</span>
+      </div>
+
+
+
+
+
+      </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js" charset="utf-8"></script>
+  </body>
+</html>
