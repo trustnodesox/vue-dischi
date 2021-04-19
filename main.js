@@ -4,6 +4,7 @@ var app = new Vue({
   el: '#root',
   data: {
     dischi: [],
+    filter: ''
 
   },
   mounted(){

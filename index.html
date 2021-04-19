@@ -7,7 +7,7 @@
   </head>
   <body>
     <div id="root">
-      <div v-for="disco in dischi" class="disco">
+      <div v-for="disco in dischi" v-if="disco.genre.includes(filter)" class="disco">
         <img :src="disco.poster" alt="">
         <div class="details">
 
@@ -16,12 +16,17 @@
         <span>{{disco.title}}</span>
         <span>{{disco.year}}</span>
       </div>
-
-
-
-
-
+    </div>
+      <div class="select">
+        <select v-model="filter" class="" name="">
+          <option :value="Rock">rock</option>
+          <option :value="Jazz">jazz</option>
+          <option :value="Pop">pop</option>
+          <option :value="Metal">metal</option>
+          <option :value="All">all</option>
+        </select>
       </div>
+
     </div>
 
 
